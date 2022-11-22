@@ -56,8 +56,8 @@ function handleFile(file) {
             process.exit(1);
         } else {
             let arr = fs.readFileSync(file).toString().split('\n');
-            for (i in arr) {
-                let url = new URL(arr[i])
+            for (i of arr) {
+                let url = new URL(i)
                 console.log(url)
                 let hostname = url.hostname
                 let href = url.href
